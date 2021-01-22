@@ -1,26 +1,25 @@
 
-<div class="row">
-  <div class="col-12">
+
+  <div>
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span><span class="text-light ml-3">Pokedex</span>
-        </button> <span class="text-light ml-3">Proyecto PokeApi</span>
+          <span class="navbar-toggler-icon"></span><span class="text-light ml-2"> Pokedex</span>
+        </button> <span class="text-light ml-3">{{title}}</span>
       </div>
     </nav>
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-secondary p-4  col-3 ">
-        <ul class="list-group">
-          <li class="list-group-item">Menú pincipal</li>
-          <li class="list-group-item">Consultar pokemon</li>
-          <li class="list-group-item">Listar pokemones</li>
-        </ul>
+    <div class="menu-principal">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-secondary p-4">
+          <ul class="list-group">
+            <li class="list-group-item">Menú pincipal</li>
+            <li class="list-group-item">Consultar pokemon</li>
+            <li class="list-group-item">Listar pokemones</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
 
-</div>
-
-{{title}}
 <router-outlet></router-outlet>
