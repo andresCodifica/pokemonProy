@@ -12,13 +12,22 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr *ngFor="let pokemon of listaPokemon">
               <th scope="row">1</th>
-              <td>Diito</td>
+              <td>{{pokemon.name}}</td>
+              <td><img src="#" alt=""></td>
+            </tr>
+            <hr>
+            <tr *ngFor="let pokemon of this.$listaPokemonObs | async">
+              <th scope="row">1</th>
+              <td>{{pokemon.name}}</td>
               <td><img src="#" alt=""></td>
             </tr>
           </tbody>
         </table>
+        <div>
+        <!--{{listaPokemon | json}}-->
+        </div>
       </div>
     </div>
   </div>

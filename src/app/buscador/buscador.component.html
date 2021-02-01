@@ -9,6 +9,13 @@
               <input type="text" class="form-control" placeholder="Busque su pokemón" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <hr>
+            <div *ngIf="currentPokemon">
+              {{ (currentPokemon | async).name}}
+              {{(currentPokemon | async).id}}
+              {{(currentPokemon | async).abilities}}
+            </div>
+            <hr>
+              {{currentPokemon2.name}}
             <div class="container col-3">
               <div class="marin-div">
               <button type="button" class="btn btn-info">Buscar</button>
