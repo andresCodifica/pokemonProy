@@ -15,14 +15,10 @@
             <tr *ngFor="let pokemon of listaPokemon">
               <th scope="row">1</th>
               <td>{{pokemon.name}}</td>
-              <td><img src="#" alt=""></td>
+              <td><img src="#" alt=""><button>ver</button> </td>
+
             </tr>
             <hr>
-            <tr *ngFor="let pokemon of this.$listaPokemonObs | async">
-              <th scope="row">1</th>
-              <td>{{pokemon.name}}</td>
-              <td><img src="#" alt=""></td>
-            </tr>
           </tbody>
         </table>
         <div>

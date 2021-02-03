@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-detalle',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(rutaActiva: ActivatedRoute) {
+    console.log("aca "+rutaActiva.snapshot.params.item)
+  }
 
   ngOnInit(): void {
   }

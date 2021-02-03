@@ -6,19 +6,13 @@
             <h6>Ingrese nombre o numero de pokemón</h6>
             <div class="input-group flex-nowrap mt-4 mb-4">
               <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
-              <input type="text" class="form-control" placeholder="Busque su pokemón" aria-label="Username" aria-describedby="addon-wrapping">
+              <input type="text" class="form-control" placeholder="Busque su pokemón" aria-label="Username" (input) = "getInput($event)" aria-describedby="addon-wrapping">
             </div>
             <hr>
-            <div *ngIf="currentPokemon">
-              {{ (currentPokemon | async).name}}
-              {{(currentPokemon | async).id}}
-              {{(currentPokemon | async).abilities}}
-            </div>
-            <hr>
-              {{currentPokemon2.name}}
+
             <div class="container col-3">
               <div class="marin-div">
-              <button type="button" class="btn btn-info">Buscar</button>
+              <a type="button" (click)="sendParam()" class="btn btn-info">Buscar</a>
               </div>
             </div>
         </div>

@@ -1,7 +1,10 @@
 import { PokemonDataService } from './../services/pokemon-data.service';
 import { Pokemon } from './../models/Pokemon';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-buscador',
@@ -12,12 +15,15 @@ export class BuscadorComponent implements OnInit {
 
   currentPokemon : Observable<Pokemon>;
   currentPokemon2 : Pokemon;
+  itemPokemon: String
 
 
 
+  constructor(
+    pokemonDataService: PokemonDataService,
+    private router: Router) {
 
-  constructor(pokemonDataService: PokemonDataService) {
-   console.log('1', this.currentPokemon);
+   //console.log('1', this.currentPokemon);
    this.currentPokemon = pokemonDataService.getPokemonData();
 
    pokemonDataService.getPokemonData().subscribe(
@@ -27,6 +33,14 @@ export class BuscadorComponent implements OnInit {
    );
 
    console.log('2', this.currentPokemon);
+  }
+
+  getInput(event:Event){
+    this.itemPokemon =  (<HTMLInputElement>event.target).value;
+  }
+
+  sendParam(){
+    this.router.navigate(['/detalle/',this.itemPokemon]);
   }
 
   ngOnInit(): void {
