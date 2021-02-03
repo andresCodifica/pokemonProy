@@ -9,7 +9,9 @@
               <input type="text" class="form-control" placeholder="Busque su pokemón" aria-label="Username" (input) = "getInput($event)" aria-describedby="addon-wrapping">
             </div>
             <hr>
-
+            <div *ngIf="validation" class="alert alert-danger" role="alert">
+              {{validation}}
+            </div>
             <div class="container col-3">
               <div class="marin-div">
               <a type="button" (click)="sendParam()" class="btn btn-info">Buscar</a>

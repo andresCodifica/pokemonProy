@@ -16,6 +16,7 @@ export class BuscadorComponent implements OnInit {
   currentPokemon : Observable<Pokemon>;
   currentPokemon2 : Pokemon;
   itemPokemon: String
+  validation :String
 
 
 
@@ -40,6 +41,10 @@ export class BuscadorComponent implements OnInit {
   }
 
   sendParam(){
+    if(this.itemPokemon == "" || this.itemPokemon == undefined){
+        this.validation = "Campo de texto vacio."
+        return false
+    }
     this.router.navigate(['/detalle/',this.itemPokemon]);
   }
 
