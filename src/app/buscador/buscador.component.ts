@@ -25,13 +25,13 @@ export class BuscadorComponent implements OnInit {
     private router: Router) {
 
    //console.log('1', this.currentPokemon);
-   this.currentPokemon = pokemonDataService.getPokemonData();
+   /*this.currentPokemon = pokemonDataService.getPokemonData();
 
    pokemonDataService.getPokemonData().subscribe(
      (pokemon) => {
         this.currentPokemon2 = pokemon;
      }
-   );
+   );*/
 
    console.log('2', this.currentPokemon);
   }

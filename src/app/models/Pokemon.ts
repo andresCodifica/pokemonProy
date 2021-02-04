@@ -5,6 +5,7 @@ export class Pokemon {
   name:String;
   id: number;
   abilities:[];
+  sprites: any
 
   constructor(){}
 }

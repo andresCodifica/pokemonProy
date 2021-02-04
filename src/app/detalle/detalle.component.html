@@ -5,14 +5,14 @@
       <div class="container mt-2" class="mx-auto" style="width: 250px;">
           <h3>Nombre pokemon</h3>
       </div>
-      <div class="row mt-5" >
+      <div class="row mt-5" *ngIf="currentPokemon">
         <div class="col-sm-3">
           <table class="table table-bordered">
             <tr>
               <th>Caracteristicas</th>
             </tr>
             <tr>
-              <td>@fat</td>
+              <td>ejemplo</td>
             </tr>
             <tr>
               <td>@twitter</td>
@@ -20,8 +20,8 @@
           </table>
         </div>
         <div class="col-sm-6">
-          <div class="card" style="width: 18rem;" class="mx-auto" style="width: 300px;">
-            <img src="/assets\img\pikachu.png" class="card-img-top">
+          <div class="card"  class="mx-auto" style="width: 150px;">
+            <img [src]="currentPokemon.sprites.other.dream_world.front_default" class="card-img-top">
           </div>
         </div>
         <div class="col-sm-3">
