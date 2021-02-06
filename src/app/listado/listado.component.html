@@ -6,16 +6,14 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
               <th scope="col">Nombre Pokemon</th>
               <th scope="col">Img</th>
             </tr>
           </thead>
-          <tbody>
-            <tr *ngFor="let pokemon of listaPokemon">
-              <th scope="row">1</th>
-              <td>{{pokemon.name}}</td>
-              <td><img src="#" alt=""><button>ver</button> </td>
+          <tbody *ngIf="listPokemonDetail">
+            <tr *ngFor="let pokemon of listPokemonDetail">
+              <td *ngIf="pokemon">{{pokemon.name}}</td>
+              <td><img [src]="pokemon.sprites.front_default" alt=""></td>
 
             </tr>
             <hr>
@@ -29,20 +27,18 @@
   </div>
 </div>
 <div class="container col-sm-7">
-  <div class="container col-3 mt-3 mb-4">
+  <div class="container col-2 mt-3 mb-4">
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
+            <span aria-hidden="true">&laquo;- </span>
           </a>
         </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
         <li class="page-item">
           <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
+            
+            <span aria-hidden="true"> -&raquo;</span>
           </a>
         </li>
       </ul>
