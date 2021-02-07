@@ -1,21 +1,24 @@
-<div class="container mt-5 col-sm-7">
+<div class="container mt-5 col-sm-7" *ngIf="currentPokemon">
   <div class="card border border-5 border-info">
     <div class="card-body mt-2">
-      <h5>Poke List</h5>
-      <div class="container mt-2" class="mx-auto" style="width: 250px;">
-          <h3>Nombre pokemon</h3>
+      <h5>Pokemon</h5>
+      <div class="container mt-2" class="mx-auto" style="width: 150px;">
+          <h3>{{currentPokemon.name}}</h3>
       </div>
-      <div class="row mt-5" *ngIf="currentPokemon">
+      <div class="row mt-5" >
         <div class="col-sm-3">
           <table class="table table-bordered">
             <tr>
-              <th>Caracteristicas</th>
+              <th>Detalles</th>
             </tr>
             <tr>
-              <td>ejemplo</td>
+              <td>Id: {{currentPokemon.id}}</td>
             </tr>
             <tr>
-              <td>@twitter</td>
+              <td>Orden: {{currentPokemon.order}}</td>
+            </tr>
+            <tr>
+              <td>Experiencia: {{currentPokemon.base_experience}}</td>
             </tr>
           </table>
         </div>
@@ -27,13 +30,11 @@
         <div class="col-sm-3">
           <table class="table table-bordered">
             <tr>
-              <th>Detalles</th>
+              <th>Habidades</th>
             </tr>
-            <tr>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <td>@twitter</td>
+
+            <tr *ngFor="let abilities of currentPokemon.abilities">
+              <td>{{abilities.ability.name}}</td>
             </tr>
           </table>
         </div>

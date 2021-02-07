@@ -19,10 +19,9 @@ export class DetalleComponent implements OnInit {
     pokemonDataService.getPokemonData(rutaActiva.snapshot.params.item).subscribe(
       (pokemon) => {
         this.currentPokemon = pokemon;
-        console.log(pokemon)
+        console.log(pokemon.abilities)
      }
     )
-    console.log("aca "+rutaActiva.snapshot.params.item)
   }
 
   ngOnInit(): void {
