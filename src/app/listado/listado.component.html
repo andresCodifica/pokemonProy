@@ -14,7 +14,7 @@
             <tr *ngFor="let pokemon of listPokemonDetail">
               <td *ngIf="pokemon">{{pokemon.name}}</td>
               <td>
-                <a (click)="sendParam(pokemon.name)"><img [src]="pokemon.sprites.front_default" width="70" height="70" alt=""></a>
+                <a class="pointer" (click)="sendParam(pokemon.name)"><img [src]="pokemon.sprites.front_default" width="70" height="70" alt=""></a>
               </td>
             <hr>
           </tbody>
@@ -31,12 +31,12 @@
     <nav aria-label="Page navigation example">
       <ul class="pagination">
         <li class="page-item" *ngIf="(listPokemon)">
-          <a class="page-link" *ngIf="(listPokemon.previous)" (click)="getList(listPokemon.previous)" aria-label="Previous">
+          <a class="page-link pointer" *ngIf="(listPokemon.previous)" (click)="getList(listPokemon.previous)" aria-label="Previous">
             <span aria-hidden="true">&laquo;- </span>
           </a>
         </li>
         <li class="page-item"  *ngIf="(listPokemon)">
-          <a class="page-link" *ngIf="(listPokemon.next)" (click)="getList(listPokemon.next)" aria-label="Next">
+          <a class="page-link pointer" *ngIf="(listPokemon.next)" (click)="getList(listPokemon.next)" aria-label="Next">
             <span aria-hidden="true"> -&raquo;</span>
           </a>
         </li>
