@@ -21,10 +21,9 @@ export class PokemonDataService {
     return this.httpClient.get <Pokemon[]>('https://pokeapi.co/api/v2/pokemon');
   }
 
-  getPokemonListOffSet() :Observable<PokemonList> {
-    this.httpClient.get<PokemonList>('https://pokeapi.co/api/v2/pokemon?offset=0&limit=15')
+  getPokemonListOffSet(url: String) :Observable<PokemonList> {
 
-    return  this.httpClient.get<PokemonList>('https://pokeapi.co/api/v2/pokemon?offset=0&limit=15');   
+    return  this.httpClient.get<PokemonList>(url.valueOf());   
   }
 
 }
