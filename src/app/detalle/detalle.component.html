@@ -2,7 +2,7 @@
   <div class="card border border-5 border-info">
     <div class="card-body mt-2">
       <h5>Pokemon</h5>
-      <div class="container mt-2" class="mx-auto" style="width: 150px;">
+      <div class="container mt-2" class="mx-auto" style="width: 180px;">
           <h3>{{currentPokemon.name}}</h3>
       </div>
       <div class="row mt-5" >
@@ -30,7 +30,7 @@
         <div class="col-sm-3">
           <table class="table table-bordered">
             <tr>
-              <th>Habidades</th>
+              <th>Habilidades</th>
             </tr>
 
             <tr *ngFor="let abilities of currentPokemon.abilities">
@@ -41,7 +41,8 @@
         <div class="container mt-4">
           <div class="mx-auto" style="width: 100px;">
               <h3>
-                <i class="fas fa-arrow-left" style="margin-right: 8px"></i> <i class="fas fa-arrow-right" style="margin-left: 8px"></i>
+                <i class="fas fa-arrow-left pointer" (click) = "previousPokemon(currentPokemon.id)" style="margin-right: 8px"></i> 
+                <i class="fas fa-arrow-right pointer" (click) = "nextPokemon(currentPokemon.id)" style="margin-left: 8px"></i>
               </h3>
           </div>
         </div>
